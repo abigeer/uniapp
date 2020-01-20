@@ -1,0 +1,163 @@
+
+.Ucenter-bg{
+	background-image: url(https://image.weilanwl.com/color2.0/index.jpg);
+	/* background-image: url(http://localhost:38080/static/indextop.png); */
+	/* background-position: 0upx -100upx; */
+	background-size: 100% 330rpx;
+	background-repeat: no-repeat;
+	overflow: hidden;
+}
+image[class*="gif-"] {
+	border-radius: 6rpx;
+	display: block;
+	/* z-index: 99; */
+	mix-blend-mode: screen;
+}
+.response{
+	position: relative;
+	left: 0rpx;
+	top: 200rpx;
+	/* bottom: 0upx; */
+}
+.chrs{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
+	position: relative;
+	/* top: 130upx; */
+}
+.content {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: column;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+.avator-hat {
+	/* position: relative; */
+	/* height:700rpx;
+	width: 700rpx; */
+	/* background-color: #007AFF; */
+	/* background-image:url(https://wx.qlogo.cn/mmopen/vi_32/Q0j4TwGTfTJgtqEhLtzEvmHfCzkKk2Il656KUpIbRzCRfbFHb4hUnN8c2BibKaSUMLhBw2hc8sJYpc94LaCicPMg/132); */
+	/* background-size: 700rpx 700rpx; */
+	background-repeat: no-repeat;
+	margin-top: 15rpx;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+.text-area {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+}
+.title {
+	font-size: 36rpx;
+	color: #8f8f94;
+}
+.touchwrap{
+    -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+            transform-origin: center;
+    position: relative;
+    z-index: 100;
+}
+.imgwrap {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: auto;
+    -webkit-transform-origin: center;
+        -ms-transform-origin: center;
+            transform-origin: center;
+    /* float: left; */
+    border: 5rpx transparent dashed;
+	display: inline-block;
+}
+/* 解决imagewrap的高度塌陷问题 */
+.clearfix:after{
+	content: "";
+	display: block;
+	clear: both;
+}
+.imgwrap image {
+    float: left;
+}
+.touchactive .x{
+	display: block;
+}
+.touchactive .o{
+	display: block;
+}
+.x{
+	position: absolute;
+	width: 40rpx;
+	height: 40rpx;
+	top: -20rpx;
+	left: -20rpx;
+	z-index: 500;
+	font-weight: bold;
+	overflow: hidden;
+	display: none;
+	color: #D1E3F1;
+}
+.o{
+	position: absolute;
+	bottom: -20rpx;
+	right: -20rpx;
+	width: 40rpx;
+	height: 40rpx;
+	overflow: hidden;
+	display: none;
+	text-align: center;
+	font-weight: bold;
+	color: #D1E3F1;
+}
+.getbutton{
+	width: 90%;
+}
+.hat-text{
+}
+.hat-list{
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+	white-space: nowrap;
+	height: 100rpx;
+	width: 100%;
+}
+.hat-item{
+	display: inline-block;
+	width: 150rpx;
+	height: 150rpx;
+	/* background-color: #007AFF; */
+}
+
+

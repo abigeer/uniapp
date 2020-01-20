@@ -1,0 +1,55 @@
+<script>
+	import Vue from 'vue'
+	export default {
+		globalData:{
+			items:[],
+			userInfo:{},
+			isLogin:false
+		},
+		onLaunch: function() {
+			console.log('App Launch')
+			//自定义导航栏
+			uni.getSystemInfo({
+					success: function(e) {
+						// #ifndef MP
+						Vue.prototype.StatusBar = e.statusBarHeight;
+						if (e.platform == 'android') {
+							Vue.prototype.CustomBar = e.statusBarHeight + 50;
+						} else {
+							Vue.prototype.CustomBar = e.statusBarHeight + 45;
+						};
+						// #endif
+						// #ifdef MP-WEIXIN
+						//Vue.prototype.StatusBar = e.statusBarHeight;
+						let custom = wx.getMenuButtonBoundingClientRect();
+						if (custom) {
+							Vue.prototype.Custom = custom;
+							Vue.prototype.CustomBar = custom.bottom + custom.top - e.statusBarHeight;
+						} else {
+							Vue.prototype.CustomBar = e.statusBarHeight + 50;
+						}
+						//Vue.prototype.Custom = custom;
+						//Vue.prototype.CustomBar = custom.bottom + custom.top - e.statusBarHeight;
+						// #endif		
+						// #ifdef MP-ALIPAY
+						Vue.prototype.StatusBar = e.statusBarHeight;
+						Vue.prototype.CustomBar = e.statusBarHeight + e.titleBarHeight;
+						// #endif
+						// console.log("导航栏高度"+Vue.prototype.CustomBar);
+					}
+				})
+		},
+		onShow: function() {
+			console.log('App Show')
+		},
+		onHide: function() {
+			console.log('App Hide')
+		}
+	}
+</script>
+
+<style>
+	/*每个页面公共css */
+	@import url("colorui/main.css");
+	@import url("colorui/icon.css");
+</style>
